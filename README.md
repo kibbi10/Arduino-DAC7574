@@ -1,22 +1,7 @@
-Adafruit_MCP4725
-================
+Arduino Library to drive the DAC7574 Quad 12Bit DAC Chip
+----
 
-This is the Adafruit MCP4725 12-bit I2C DAC Driver library
+Very simple library which writes to one of the 4 (A,B,C,D) channels of the
+TI DAC7574 12 bit DAC using I2C.
 
-Tested and works great with the Adafruit MCP4725 Breakout Board 
-    ------> http://www.adafruit.com/products/935
-
-This chip uses I2C to communicate, 2 pins are required to  
-interface
-
-Adafruit invests time and resources providing this open source code, 
-please support Adafruit and open-source hardware by purchasing 
-products from Adafruit!
-
-Written by Kevin Townsend/Limor Fried for Adafruit Industries.  
-BSD license, check license.txt for more information
-All text above must be included in any redistribution
-
-To download. click the DOWNLOADS button in the top right corner, rename the uncompressed folder Adafruit_MCP4725. Check that the Adafruit_MCP4725 folder contains Adafruit_MCP4725.cpp and Adafruit_MCP4725.h
-
-Place the Adafruit_MCP4725 library folder your arduinosketchfolder/libraries/ folder. You may need to create the libraries subfolder if its your first library. Restart the IDE.
+This code has not been tested, still under works.

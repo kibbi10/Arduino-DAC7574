@@ -26,14 +26,19 @@
 #include <Wire.h>
 
 #define MCP4726_CMD_WRITEDAC            (0x40)  // Writes data to the DAC
-						// 1000000
+// unsigned char CMD_BYTES[4] = {0x08,0xA,0xC,0x16}; // Channels A,B,C,D
+#define CMD_A  (0x08)
+#define CMD_B  (0xA)
+#define CMD_C  (0xC)
+#define CMD_D  (0x16)
+
+
 
 class DAC7574{
  public:
   DAC7574();
   void begin(uint8_t a);  
-  void setVoltage( uint16_t outputvl bool writeEEPROM );
-
- private:
+  void setVoltage( uint16_t outputvl, int channel);
+  private:
   uint8_t _i2caddr;
 };
