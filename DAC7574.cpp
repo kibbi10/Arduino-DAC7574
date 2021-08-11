@@ -1,14 +1,12 @@
-/**************************************************************************/
-/*! 
-    @file     Adafruit_MCP4725.cpp
-    @author   K.Townsend (Adafruit Industries)
-	  @license  BSD (see license.txt)
-	
-	  @section  HISTORY
+/**************************************************************************
+    DAC7574 quad 12-bit DAC chip from Texas Instruments
+    https://www.ti.com/product/DAC7574
 
-    v1.0 - First release
-*/
-/**************************************************************************/
+    Written by Tryggvi Kr Tryggvason
+    Grein Research ehf
+    Iceland
+
+**************************************************************************/
 #if ARDUINO >= 100
  #include "Arduino.h"
 #else
@@ -47,8 +45,6 @@ void DAC7574::setVoltage( uint16_t data, int channel )
     Wire.write(CMD_D);
   }
 
-  //Wire.write(data / 16);                   // Upper data bits          (D11.D10.D9.D8.D7.D6.D5.D4)
-  //Wire.write((data % 16) << 4);            // Lower data bits          (D3.D2.D1.D0.x.x.x.x)
   Wire.write(data >> 4);
   Wire.write(data << 4);
   Wire.endTransmission();
