@@ -8,10 +8,10 @@ https://www.ti.com/product/DAC7574
 
 Just include the library in the project and initialize the object e.g. by
 
-DAC7574 dac;
+    DAC7574 dac;
 
 and then you can set the voltage on each of the four channels A through D by
 
-dac.setVoltage(level, channel)
+    dac.setVoltage(level, channel)
 
-where level and channel are type int in the range 0-4095 and 0-3 respectively.
+where `level` and `channel` are type `int` in the range 0-4095 and 0-3 respectively.
