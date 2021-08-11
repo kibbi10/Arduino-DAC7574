@@ -9,9 +9,13 @@ https://www.ti.com/product/DAC7574
 Just include the library in the project and initialize the object e.g. by
 ```c++
 #include <DAC7574.h>
+#define DAC_ADDRESS 0x4C
+
 DAC7574 dac;
+
+dac.begin(DAC_ADDRESS);
 ```
-and then you can set the voltage on each of the four channels A through D by
+where `DAC_ADDRESS` is the pyhsical I2C address of the chip (see datasheet). Then you can set the voltage on each of the four channels A through D by
 ```c++
 dac.setVoltage(level, channel);
 ```
